@@ -50,9 +50,9 @@ def uniqueUpdate(data1, data2):
                 dupKeys[k] = [v1, v2]
                 # Remove (k, v1) from data1
                 del data1[k]
-            else:
+        else:
                 # Add (k, v2) to data1
-                data1[k] = v2
+            data1[k] = v2
     # After processing all (k, v2) in
     # data2, return the dictionary
     return dupKeys
@@ -112,3 +112,45 @@ if __name__ == '__main__':
     print(data1)
     print(data2)
     print(dup)
+
+    
+''' 5.a) when we give an input of a key which is not present in data1
+            the key-value pair is not added to it
+             ex: 3 
+                 1 2
+                 2 3
+                 4 5
+                 2 
+                 7 0 
+                 2 8 
+ 5.b) Indentation changes required:line 53 else block should be indented according to the outer if not the inner if.
+ 
+ 5.c)   Test case 1:
+   4
+   1 2
+   2 2
+   3 2
+   4 6
+   2
+   3 3
+   4 6		
+
+   Test case 2:
+   4
+   1 2
+   2 2
+   3 2
+   4 4
+   2
+   3 3
+   4 9
+
+   Test case 3:
+    3
+    1 2
+    2 2
+    3 9
+    2
+    7 9
+    3 8 '''
+
